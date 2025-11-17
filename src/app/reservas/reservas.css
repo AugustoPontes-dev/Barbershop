@@ -1,0 +1,55 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+.area-reservas{
+    border: 2px solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vh;
+    height: 60vh;
+    margin-left: 115vh;
+}
+.titulo{
+    font-size:xx-large;
+    margin-bottom: 3vh;
+    color: rgb(138, 133, 133);
+}
+.area-boxs{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(141, 139, 137, 0.205);
+    width:50vh;
+    height: 8vh;
+    border-radius: 30px;
+    border: 1px solid;
+    border-color:rgba(141, 139, 137, 0.425);
+}
+.leftinbox{
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 8px;
+    font-weight: 800;
+
+}
+.rightinbox{
+    margin-top: 20px;
+    background-color:rgba(141, 139, 137, 0.712) ;
+    height: 3vh;
+    margin-right: 3vh;
+    border-radius: 10%;
+}
+p{
+    justify-content: center;
+    align-content: center;
+    font-weight:800;
+}

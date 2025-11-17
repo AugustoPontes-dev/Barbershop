@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "inter", Arial, sans-serif;
+    font-weight: 800;
 }
 img{
     height:40px;
@@ -28,7 +29,9 @@ img{
 }
 .nav-menu{
     display: flex;
-    gap :30px;
+    gap :10vh;
+    margin-right: 10%;
+    font-size: large;
 }
 .botoes-nav{
 

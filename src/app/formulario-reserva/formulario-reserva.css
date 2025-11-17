@@ -65,12 +65,12 @@ img{
     margin-left: 10%;
     background-color: black;
     color: white;
-    border-radius: 16px;
+    border-radius: 10vh;
     margin-top:1vh;
     margin-bottom: 3vh;
 }
 .Subm:hover{
-    background-color: white;
+    background-color: rgba(70, 77, 70, 0.37);
     color: black;
     border-radius: 0px;
 }
