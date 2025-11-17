@@ -1,4 +1,7 @@
-th:hover{
+*{
+    font-size: x-large;
+}
+    th:hover{
     background-color: black;
     color: white;
 }
@@ -23,4 +26,9 @@ th{
 #previous:hover{
     background-color: black;
     color: white;
+}
+
+table{
+    height: 50vh;
+    width: 70vh;
 }
