@@ -1,18 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
 .contato-container {
-display: flex;
-justify-content: center;
-padding-top: 40px;
-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    width: 100%;
 }
 
 
 .chat-card {
-width: 60%;
-background: #ffffff;
-padding: 30px;
-border-radius: 16px;
-box-shadow: 0 0 10px rgba(0,0,0,0.06);
+    width: 60%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.06);
 }
 
 

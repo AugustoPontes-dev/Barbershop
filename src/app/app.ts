@@ -4,10 +4,11 @@ import { Header } from "./header/header";
 import { Calendario } from "./calendario/calendario";
 import { FormularioReserva } from "./formulario-reserva/formulario-reserva";
 import { Reservas } from "./reservas/reservas";
+import { Contato } from "./contato/contato";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Calendario, FormularioReserva, Reservas],
+  imports: [RouterOutlet, Header, Calendario, FormularioReserva, Reservas, Contato],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
