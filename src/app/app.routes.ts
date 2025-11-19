@@ -3,6 +3,6 @@ import { Reserva } from './pages/reserva/reserva';
 import { Chat } from './pages/chat/chat';
 
 export const routes: Routes = [
-{path: '1', component: Reserva},
-{path: '', component: Chat},
+{path: '', component: Reserva},
+{path: 'chat', component: Chat},
 ];
