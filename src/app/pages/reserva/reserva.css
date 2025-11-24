@@ -1,4 +1,33 @@
 div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+.reservasre{
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+
+}
+.fundo {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.fundo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://media.istockphoto.com/id/1047070568/photo/barber-pole-on-the-background-of-the-old-brick-wall-concept-barber-shop.jpg?s=612x612&w=0&k=20&c=8s6E3E5tJm-ANkLOm8V8bwane3ONviAA2yefO5HpusE=);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
