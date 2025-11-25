@@ -1,0 +1,4 @@
+.gradiente{
+    background-image: linear-gradient(gray, black);
+    height: 100vh;
+}

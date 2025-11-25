@@ -18,10 +18,10 @@ div{
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(https://media.istockphoto.com/id/1047070568/photo/barber-pole-on-the-background-of-the-old-brick-wall-concept-barber-shop.jpg?s=612x612&w=0&k=20&c=8s6E3E5tJm-ANkLOm8V8bwane3ONviAA2yefO5HpusE=);
+    background-image: url(https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9);
     background-size: cover;
     background-position: center;
-    filter: blur(4px);
+    filter: blur(4px) brightness(30%);
     z-index: -1;
 }
 body, html{
