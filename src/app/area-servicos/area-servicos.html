@@ -1,15 +1,15 @@
 <div class="filtros">
-  <button>Todos</button>
-  <button>Cabelo</button>
-  <button>Barba</button>
-  <button>Combo</button>
-  <button>Tratamento</button>
-  <button>Extras</button>
+  <button (click)="setFilter('todos')" [class.ativo]="filtroAtivo === 'todos'" data-filter="todos">Todos</button>
+  <button (click)="setFilter('cabelo')" [class.ativo]="filtroAtivo === 'cabelo'" data-filter="cabelo">Cabelo</button>
+  <button (click)="setFilter('barba')" [class.ativo]="filtroAtivo === 'barba'" data-filter="barba">Barba</button>
+  <button (click)="setFilter('combo')" [class.ativo]="filtroAtivo === 'combo'" data-filter="combo">Combo</button>
+  <button (click)="setFilter('tratamento')" [class.ativo]="filtroAtivo === 'tratamento'" data-filter="tratamento">Tratamento</button>
+  <button (click)="setFilter('extra')" [class.ativo]="filtroAtivo === 'extra'" data-filter="extras">Extras</button> 
 </div>
-
+<div class="cluna">
 <div class="cards">
 
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('cabelo')" data-category="cabelo">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/009/664/151/non_2x/scissor-icon-transparent-free-png.png">Tradicional</h3>
@@ -26,7 +26,7 @@
   </div>
 
   
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('combo')" data-category="combo">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://tse1.mm.bing.net/th/id/OIP.NU-mi0nQxrk6SOhnN1yC4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">Cabelo + Barba</h3>
@@ -42,7 +42,7 @@
   </div>
 
 
-  <div class="card">
+  <div class="card"[hidden]="!shouldShow('barba')" data-category="barba">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://img.freepik.com/premium-vector/sign-beard-logo-vector-icon-illustration_683738-4676.jpg">Barba Completa</h3>
@@ -57,7 +57,7 @@
       </div>
   </div>
 
-   <div class="card">
+   <div class="card"[hidden]="!shouldShow('barba')" data-category="barba">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://img.freepik.com/premium-vector/sign-beard-logo-vector-icon-illustration_683738-4676.jpg">Design de Barba</h3>
@@ -72,7 +72,7 @@
       </div>
   </div>
 
-   <div class="card">
+   <div class="card" [hidden]="!shouldShow('cabelo')" data-category="cabelo">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://cdn-icons-png.flaticon.com/512/129/129817.png">Pintura de Cabelo</h3>
@@ -87,7 +87,7 @@
       </div>
   </div>
 
-   <div class="card">
+   <div class="card" [hidden]="!shouldShow('cabelo')" data-category="cabelo">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/004/999/439/original/fire-sign-fire-flame-icon-isolated-on-white-background-illustration-free-vector.jpg">Luzes / mechas</h3>
@@ -102,7 +102,7 @@
       </div>
   </div>
 
-   <div class="card">
+   <div class="card" [hidden]="!shouldShow('tratamento')" data-category="tratamento">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://tse1.mm.bing.net/th/id/OIP.xwqI5j0Td_gCu9G5b1Z_BwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">Hidratação Capilar</h3>
@@ -116,7 +116,7 @@
         </div>
       </div>
   </div>
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('cabelo')" data-category="cabelo">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/004/999/439/original/fire-sign-fire-flame-icon-isolated-on-white-background-illustration-free-vector.jpg">Platinado</h3>
@@ -130,7 +130,7 @@
         </div>
       </div>
   </div>
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('extra')" data-category="extra">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/009/664/151/non_2x/scissor-icon-transparent-free-png.png">Sobrancelha</h3>
@@ -144,7 +144,7 @@
         </div>
       </div>
   </div>
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('tratamento')" data-category="tratamento">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://tse1.mm.bing.net/th/id/OIP.xwqI5j0Td_gCu9G5b1Z_BwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">Progressiva</h3>
@@ -158,7 +158,7 @@
         </div>
       </div>
   </div>
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('tratamento')" data-category="tratamento">
      <div class="introcard">
         <div class="cima">
         <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/004/999/439/original/fire-sign-fire-flame-icon-isolated-on-white-background-illustration-free-vector.jpg">Relaxamento</h3>
@@ -172,10 +172,10 @@
         </div>
       </div>
   </div>
-  <div class="card">
+  <div class="card" [hidden]="!shouldShow('combo')" data-category="combo">
      <div class="introcard">
         <div class="cima">
-        <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/009/664/151/non_2x/scissor-icon-transparent-free-png.png">TPacote Premium</h3>
+        <h3 class="titulocard"><img src="https://static.vecteezy.com/system/resources/previews/009/664/151/non_2x/scissor-icon-transparent-free-png.png">Pacote Premium</h3>
         <p class="tiposervico">Combo</p><br>
         <p class="subtitulo">Corte + Barba + sobrancelha + hidratação</p>
         <hr>
@@ -186,23 +186,27 @@
         </div>
       </div>
   </div>
-
-  <div class="ultservicos">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.NU-mi0nQxrk6SOhnN1yC4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-    <h3 class="titulocard">Profissionais Qualificados</h3>
-    <p class="subtitulo">Nossa equipe possui anos de experiência e treinamento contínuo</p>
-  </div>
-   <div class="ultservicos">
-    <img src="https://static.vecteezy.com/system/resources/previews/004/999/439/original/fire-sign-fire-flame-icon-isolated-on-white-background-illustration-free-vector.jpg">
-    <h3 class="titulocard">Produtos Premium</h3>
-    <p class="subtitulo">Utilizamos apenas produtos de alta qualidade para melhores resultados</p>
-  </div>
-   <div class="ultservicos">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.NU-mi0nQxrk6SOhnN1yC4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
-    <h3 class="titulocard">Atendimento Personalizado</h3>
-    <p class="subtitulo">Cada cliente recebe atenção especial e serviço sob medida</p>
-  </div>
+    <div class="linhaabaixo">
+      <div class="ultservicos">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.NU-mi0nQxrk6SOhnN1yC4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+        <h3 class="titulocard">Profissionais Qualificados</h3>
+        <p class="subtitulo">Nossa equipe possui anos de experiência e treinamento contínuo</p>
+      </div>
+      <div class="ultservicos">
+        <img src="https://static.vecteezy.com/system/resources/previews/004/999/439/original/fire-sign-fire-flame-icon-isolated-on-white-background-illustration-free-vector.jpg">
+        <h3 class="titulocard">Produtos Premium</h3>
+        <p class="subtitulo">Utilizamos apenas produtos de alta qualidade para melhores resultados</p>
+      </div>
+      <div class="ultservicos">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.NU-mi0nQxrk6SOhnN1yC4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+        <h3 class="titulocard">Atendimento Personalizado</h3>
+        <p class="subtitulo">Cada cliente recebe atenção especial e serviço sob medida</p>
+      </div>
+    </div>
+</div>
+</div>
   <div class="redirecao" routerLink=''>
     <h1 class="visual">Pronto para transformar seu visual?</h1>
     <p>Agende agora seu horário e tenha a melhor experiência em barbearia</p>
   </div>
+  
