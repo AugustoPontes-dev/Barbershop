@@ -12,9 +12,10 @@
     height: 60vh;
     margin-top: 20px;
     background-color: white;
-
-
-
+    transition: 0.5s ease;
+}
+.area-reservas:hover{
+    transform: translateY(-4%);
 }
 .titulo{
     font-size:xx-large;

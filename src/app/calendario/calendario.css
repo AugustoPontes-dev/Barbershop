@@ -36,3 +36,7 @@ aside{
     margin-top: 10vh;
     box-shadow: 0 2px 5px gray;
 }
+.meses{
+    background-color: black;
+    color: white;
+}
