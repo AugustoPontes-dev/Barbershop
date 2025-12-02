@@ -2,7 +2,7 @@
     font-family:'Times New Roman', Times, serif;
 }
 .area-reservas{
-    border: 2px solid;
+    box-shadow: 0px 2px 6px rgba(128, 128, 128, 0.74);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,11 @@
     justify-content: center;
     width: 60vh;
     height: 60vh;
-    margin-left: 115vh;
+    margin-top: 20px;
+    background-color: white;
+
+
+
 }
 .titulo{
     font-size:xx-large;
@@ -53,3 +57,4 @@ p{
     align-content: center;
     font-weight:800;
 }
+

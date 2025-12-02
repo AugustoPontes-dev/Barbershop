@@ -1,0 +1,33 @@
+div{
+    display: flex;
+    justify-content: space-around;
+}
+.reservasre{
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+
+}
+.fundo {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.fundo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) brightness(30%);
+    z-index: -1;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
